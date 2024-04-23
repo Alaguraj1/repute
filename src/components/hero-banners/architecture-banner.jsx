@@ -15,10 +15,10 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 // internal
 import { SliderHighlight } from "@/svg";
-import slider_bg_1 from "@assets/img/slider/web-banner-1.jpg";
-import slider_bg_2 from "@assets/img/slider/web-banner-2.jpg";
-import slider_bg_3 from "@assets/img/slider/web-banner-3.jpg";
-import slider_bg_4 from "@assets/img/slider/web-banner-1.jpg";
+import slider_bg_1 from "@assets/img/slider/slider-1.jpg";
+import slider_bg_2 from "@assets/img/slider/slider-1.jpg";
+import slider_bg_3 from "@assets/img/slider/slider-1.jpg";
+import slider_bg_4 from "@assets/img/slider/slider-1.jpg";
 import slider_nav_1 from "@assets/img/slider/nav/slider-nav-1.jpg";
 import slider_nav_2 from "@assets/img/slider/nav/slider-nav-2.jpg";
 import slider_nav_3 from "@assets/img/slider/nav/slider-nav-3.jpg";
