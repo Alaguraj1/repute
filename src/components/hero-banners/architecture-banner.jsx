@@ -12,7 +12,7 @@ import {
 } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 // internal
 import { SliderHighlight } from "@/svg";
 import slider_bg_1 from "@assets/img/slider/slider-1.jpg";

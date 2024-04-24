@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import ReactTooltip from "react-tooltip";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import Link from "next/link";
 // internal
 import { Plus, ArrowRightTwo, PlayThree } from "@/svg";
@@ -125,6 +125,7 @@ const ClassicSinglePortfolio = ({ item, images, index, tooltip_hover=false }) =>
   );
 };
 
-export default dynamic(() => Promise.resolve(ClassicSinglePortfolio), {
-  ssr: false,
-});
+export default ClassicSinglePortfolio;
+// dynamic(() => Promise.resolve(ClassicSinglePortfolio), {
+//   ssr: false,
+// });

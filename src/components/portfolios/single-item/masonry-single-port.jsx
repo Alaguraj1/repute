@@ -1,7 +1,7 @@
 'use client' 
 
 import React from "react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import Image from "next/image";
 import ReactTooltip from "react-tooltip";
 import { motion } from "framer-motion";
@@ -43,6 +43,7 @@ const MasonrySinglePort = ({ item }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(MasonrySinglePort), {
-  ssr: false,
-});
+export default MasonrySinglePort
+// dynamic(() => Promise.resolve(MasonrySinglePort), {
+//   ssr: false,
+// });

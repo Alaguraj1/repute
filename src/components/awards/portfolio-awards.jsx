@@ -2,7 +2,7 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
 import Image from "next/image";
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import Link from "next/link";
 // internal
 import award_img_1 from "@assets/img/award/9/award-1.jpg";
@@ -119,5 +119,6 @@ const PortfolioAwards = ({style_2=false}) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(PortfolioAwards), { ssr: false });
+export default PortfolioAwards
+// dynamic(() => Promise.resolve(PortfolioAwards), { ssr: false });
 

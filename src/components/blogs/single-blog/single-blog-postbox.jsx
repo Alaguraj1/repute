@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 // internal
 import { CommentThree, DateTwo, QuoteTwo, UserTwo } from "@/svg";
 import VideoModal from "@/components/common/modals/modal-video";
@@ -157,6 +157,7 @@ const SingleBlogPostbox = ({ blog }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(SingleBlogPostbox), {
-  ssr: false,
-});
+export default SingleBlogPostbox;
+// dynamic(() => Promise.resolve(SingleBlogPostbox), {
+//   ssr: false,
+// });

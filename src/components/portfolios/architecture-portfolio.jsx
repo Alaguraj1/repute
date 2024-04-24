@@ -3,7 +3,7 @@ import React, {  useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 // internal
 import portfolio_bg_1 from "@assets/img/portfolio/8/portfolio-1.jpg";
 import portfolio_bg_2 from "@assets/img/portfolio/8/portfolio-2.jpg";
@@ -231,4 +231,5 @@ const ArchitecturePortfolio = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(ArchitecturePortfolio), { ssr: false });
+export default ArchitecturePortfolio;
+// dynamic(() => Promise.resolve(ArchitecturePortfolio), { ssr: false });

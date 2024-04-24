@@ -1,7 +1,7 @@
 'use client' 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import Link from "next/link";
 // internal
 import portfolio_data from "@/data/portfolio-data";
@@ -126,4 +126,5 @@ const HomePersonalPortfolioArea = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(HomePersonalPortfolioArea), { ssr: false });
+export default HomePersonalPortfolioArea;
+// dynamic(() => Promise.resolve(HomePersonalPortfolioArea), { ssr: false });
