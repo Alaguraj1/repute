@@ -1,4 +1,4 @@
-import { FooterSix, Header, Wrapper } from "@/components/layout";
+import { FooterNine, HeaderNine, Wrapper } from "@/components/layout";
 import NotFound from "@/components/not-found";
 
 export const metadata = {
@@ -8,9 +8,9 @@ export const metadata = {
 const index = () => {
     return (
         <Wrapper> 
-            <Header top_bar={false} header_solid={true} commonOffCanvas={true} />
+            <HeaderNine top_bar={false} header_solid={true} commonOffCanvas={true} />
             <NotFound /> 
-            <FooterSix style_2={true} />
+            <FooterNine style_2={true} />
         </Wrapper>
     );
 };
