@@ -1,16 +1,18 @@
-'use client'
+"use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 // internal
 import about_img from "@assets/img/about/8/about-img-1.jpg";
 import bg from "@assets/img/about/8/about-img-2.jpg";
-import { HighlightShapeFive, PhoneFive, Play } from "@/svg";
+import {
+  HighlightShapeFive,
+  PhoneFive,
+  // Play
+} from "@/svg";
 // import VideoModal from "@/components/common/modals/modal-video";
-import useModal from "@/hooks/use-modal";
 
 const ArchitectureAbout = () => {
-  const { isVideoOpen, setIsVideoOpen } = useModal();
   return (
     <>
       <div className="black-bg-12 pt-140">
@@ -23,7 +25,7 @@ const ArchitectureAbout = () => {
                   data-wow-delay=".3s"
                   data-wow-duration="1s"
                 >
-                  <Image src={about_img} alt="image" />
+                  <img src={about_img} alt="image" />
                 </div>
                 <div
                   className="about__thumb-8-right wow fadeInUp"
@@ -58,20 +60,29 @@ const ArchitectureAbout = () => {
                 data-wow-duration="1s"
               >
                 <div className="section__title-wrapper-8 mb-15">
-                  <span className="section__title-pre-8">Full Service Digital Agency</span>
+                  <span className="section__title-pre-8">
+                    Full Service Digital Agency
+                  </span>
                   <h3 className="section__title-8">
-                  Build-Promote <br />  {' '}
+                    Build-Promote <br />{" "}
                     <span className="section__title-highlight-8">
-                    Market Brands.
-                        <HighlightShapeFive />
+                      Market Brands.
+                      <HighlightShapeFive />
                     </span>
                   </h3>
                 </div>
                 <p className="about-wrapper-8-paragraph">
-                With more than 2 decades of Credibility and Expertise Repute will be your right partner to progress.
+                  With more than 2 decades of Credibility and Expertise Repute
+                  will be your right partner to progress.
                 </p>
                 <p>
-                We are a one-stop solution for your brand’s digital journey and are passionate about creating a brand experience with our unique strategy and expertise, emphasizing every dimension of branding and promotion. We are proficient in market research, corporate branding, logo design, redefining brand strategy, media planning, digital advertising, content creation, and website design and development.
+                  We are a one-stop solution for your brand’s digital journey
+                  and are passionate about creating a brand experience with our
+                  unique strategy and expertise, emphasizing every dimension of
+                  branding and promotion. We are proficient in market research,
+                  corporate branding, logo design, redefining brand strategy,
+                  media planning, digital advertising, content creation, and
+                  website design and development.
                 </p>
 
                 <div className="about__call-8 d-flex align-items-center mb-50">
@@ -91,7 +102,7 @@ const ArchitectureAbout = () => {
                   <Link href="/about" className="tp-btn-border-8 mb-20 mr-30">
                     More About Us
                   </Link>
-                  <a
+                  {/* <a
                     style={{ cursor: "pointer" }}
                     onClick={() => setIsVideoOpen(true)}
                     className="about-play-btn-2 mb-20 popup-video"
@@ -101,7 +112,7 @@ const ArchitectureAbout = () => {
                     </span>
                     View our <br />
                     Story
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
