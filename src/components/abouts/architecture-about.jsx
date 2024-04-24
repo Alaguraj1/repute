@@ -1,14 +1,12 @@
-"use client";
+'use client'
 import React from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 // internal
 import about_img from "@assets/img/about/8/about-img-1.jpg";
 import bg from "@assets/img/about/8/about-img-2.jpg";
-import {
-  HighlightShapeFive,
-  PhoneFive,
-  // Play
+import { HighlightShapeFive, PhoneFive, 
+  // Play 
 } from "@/svg";
 // import VideoModal from "@/components/common/modals/modal-video";
 
@@ -25,7 +23,7 @@ const ArchitectureAbout = () => {
                   data-wow-delay=".3s"
                   data-wow-duration="1s"
                 >
-                  <img src={about_img} alt="image" />
+                  <Image src={about_img} alt="image" />
                 </div>
                 <div
                   className="about__thumb-8-right wow fadeInUp"
@@ -60,29 +58,20 @@ const ArchitectureAbout = () => {
                 data-wow-duration="1s"
               >
                 <div className="section__title-wrapper-8 mb-15">
-                  <span className="section__title-pre-8">
-                    Full Service Digital Agency
-                  </span>
+                  <span className="section__title-pre-8">Full Service Digital Agency</span>
                   <h3 className="section__title-8">
-                    Build-Promote <br />{" "}
+                  Build-Promote <br />  {' '}
                     <span className="section__title-highlight-8">
-                      Market Brands.
-                      <HighlightShapeFive />
+                    Market Brands.
+                        <HighlightShapeFive />
                     </span>
                   </h3>
                 </div>
                 <p className="about-wrapper-8-paragraph">
-                  With more than 2 decades of Credibility and Expertise Repute
-                  will be your right partner to progress.
+                With more than 2 decades of Credibility and Expertise Repute will be your right partner to progress.
                 </p>
                 <p>
-                  We are a one-stop solution for your brand’s digital journey
-                  and are passionate about creating a brand experience with our
-                  unique strategy and expertise, emphasizing every dimension of
-                  branding and promotion. We are proficient in market research,
-                  corporate branding, logo design, redefining brand strategy,
-                  media planning, digital advertising, content creation, and
-                  website design and development.
+                We are a one-stop solution for your brand’s digital journey and are passionate about creating a brand experience with our unique strategy and expertise, emphasizing every dimension of branding and promotion. We are proficient in market research, corporate branding, logo design, redefining brand strategy, media planning, digital advertising, content creation, and website design and development.
                 </p>
 
                 <div className="about__call-8 d-flex align-items-center mb-50">
