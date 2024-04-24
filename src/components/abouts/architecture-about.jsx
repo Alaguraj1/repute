@@ -13,7 +13,7 @@ const ArchitectureAbout = () => {
   const { isVideoOpen, setIsVideoOpen } = useModal();
   return (
     <>
-      <div id="tpabout" className="about__area black-bg-12 pt-140">
+      {/* <div id="tpabout" className="about__area black-bg-12 pt-140"> */}
         <div className="container">
           <div className="row">
             <div className="col-xxl-6 col-lg-6">
@@ -107,7 +107,7 @@ const ArchitectureAbout = () => {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
 
       {/* video modal start */}
       <VideoModal
