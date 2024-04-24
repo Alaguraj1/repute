@@ -260,4 +260,5 @@ const ArchitectureBanner = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(ArchitectureBanner), { ssr: false });
+export default ArchitectureBanner
+// dynamic(() => Promise.resolve(ArchitectureBanner), { ssr: false });
