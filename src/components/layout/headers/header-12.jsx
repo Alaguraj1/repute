@@ -7,7 +7,7 @@ import Menus from "./menus";
 import logo from "@assets/img/logo/logo-black.svg";
 import { User, HeartThree, Cart, SearchTwo } from "@/svg";
 import useSticky from "@/hooks/use-sticky";
-import CartSidebar from "@/components/common/sidebar/cart-sidebar";
+// import CartSidebar from "@/components/common/sidebar/cart-sidebar";
 import OffCanvasSix from "@/components/common/off-canvas/off-canvas-6";
 
 const HeaderTwelve = ({ style_2 = false }) => {
@@ -106,7 +106,7 @@ const HeaderTwelve = ({ style_2 = false }) => {
       </header>
 
       {/* cart mini area start */}
-      <CartSidebar isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+      {/* <CartSidebar isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} /> */}
       {/* cart mini area end */}
 
       {/* off canvas start */}
