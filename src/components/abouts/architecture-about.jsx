@@ -6,14 +6,14 @@ import Link from "next/link";
 import about_img from "@assets/img/about/8/about-img-1.jpg";
 import bg from "@assets/img/about/8/about-img-2.jpg";
 import { HighlightShapeFive, PhoneFive, Play } from "@/svg";
-import VideoModal from "@/components/common/modals/modal-video";
+// import VideoModal from "@/components/common/modals/modal-video";
 import useModal from "@/hooks/use-modal";
 
 const ArchitectureAbout = () => {
   const { isVideoOpen, setIsVideoOpen } = useModal();
   return (
     <>
-      {/* <div id="tpabout" className="about__area black-bg-12 pt-140"> */}
+      <div className="black-bg-12 pt-140">
         <div className="container">
           <div className="row">
             <div className="col-xxl-6 col-lg-6">
@@ -107,14 +107,14 @@ const ArchitectureAbout = () => {
             </div>
           </div>
         </div>
-      {/* </div> */}
+      </div>
 
       {/* video modal start */}
-      <VideoModal
+      {/* <VideoModal
         isVideoOpen={isVideoOpen}
         setIsVideoOpen={setIsVideoOpen}
         videoId={"elW0kxshn8A"}
-      />
+      /> */}
       {/* video modal end */}
     </>
   );
