@@ -72,12 +72,29 @@ const menu_data = [
     //   },
     // ],
   },
-
   {
     id: 3,
-    // hasDropdown: true,
+    hasDropdown: true,
     title: "Services",
     link: "/service-details",
+    submenus: [
+      // { title: 'Classic Style', link: '/portfolio' },
+      { title: "Grid 3 Columns", link: "/portfolio-2" },
+      // { title: 'Gallery Style', link: '/portfolio-gallery' },
+      // { title: 'Masonry Full', link: '/portfolio-masonry' },
+      // { title: 'Metro Style', link: '/portfolio-metro' },
+      // { title: 'Slider Style', link: '/portfolio-slider' },
+      // { title: 'Classic Details', link: '/portfolio-details' },
+      // { title: 'List With Details', link: '/portfolio-details-list' },
+      // { title: 'Slider with Details', link: '/portfolio-details-slider' },
+      // { title: 'Video With Details', link: '/portfolio-details-video' },
+    ],
+  },
+  {
+    id: 4,
+    // hasDropdown: true,
+    title: "portfolio",
+    link: "/portfolio-gallery",
     // submenus: [
     //   { title: 'Classic Style', link: '/portfolio' },
     //   { title: "Grid 3 Columns", link: "/portfolio-2" },
@@ -92,24 +109,7 @@ const menu_data = [
     // ],
   },
 
-  {
-    id: 4,
-    hasDropdown: true,
-    title: "Portfolio",
-    link: "/portfolio",
-    submenus: [
-      // { title: 'Classic Style', link: '/portfolio' },
-      { title: "Grid 3 Columns", link: "/portfolio-2" },
-      // { title: 'Gallery Style', link: '/portfolio-gallery' },
-      // { title: 'Masonry Full', link: '/portfolio-masonry' },
-      // { title: 'Metro Style', link: '/portfolio-metro' },
-      // { title: 'Slider Style', link: '/portfolio-slider' },
-      // { title: 'Classic Details', link: '/portfolio-details' },
-      // { title: 'List With Details', link: '/portfolio-details-list' },
-      // { title: 'Slider with Details', link: '/portfolio-details-slider' },
-      // { title: 'Video With Details', link: '/portfolio-details-video' },
-    ],
-  },
+  
   // {
   //   id: 4,
   //   hasDropdown: true,

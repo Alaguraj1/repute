@@ -1,9 +1,9 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // internal
-import {Email, Search} from "@/svg"; 
+import { Email, Search } from "@/svg";
 import Menus from "./menus";
 import logo from "@assets/img/logo/logo.svg";
 import useSticky from "@/hooks/use-sticky";
@@ -14,6 +14,9 @@ const HeaderNine = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { sticky } = useSticky();
   const [isOffCanvasOpen, setIsOffCanvasOpen] = useState(false);
+
+  
+
   return (
     <>
       <header>
@@ -68,7 +71,7 @@ const HeaderNine = () => {
                           </li>
                           <li>
                             <button
-                             onClick={() => setIsOffCanvasOpen(true)}
+                              onClick={() => setIsOffCanvasOpen(true)}
                               type="button"
                               className="hamburger-btn-8 offcanvas-open-btn"
                             >
@@ -97,8 +100,11 @@ const HeaderNine = () => {
         </div>
       </header>
 
-       {/* search modal start */}
-       <SearchPopup isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
+      {/* search modal start */}
+      <SearchPopup
+        isSearchOpen={isSearchOpen}
+        setIsSearchOpen={setIsSearchOpen}
+      />
       {/* search modal end */}
 
       {/* full canvas area start */}
