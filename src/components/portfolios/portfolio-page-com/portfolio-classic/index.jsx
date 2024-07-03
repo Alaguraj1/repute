@@ -1,5 +1,5 @@
-'use client'
-import React, { useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { LayoutGroup, motion } from "framer-motion";
 // internal
@@ -10,9 +10,10 @@ import shape_4 from "@assets/img/portfolio/grid/shape/polygon-yellow.png";
 import shape_5 from "@assets/img/portfolio/grid/shape/polygon-pink.png";
 import shape_6 from "@assets/img/portfolio/grid/shape/polygon-green.png";
 import shape_7 from "@assets/img/portfolio/grid/shape/polygon-green-2.png";
-import portfolio_classic_data from "./portfolio-data"; 
+import portfolio_classic_data from "./portfolio-data";
 import ClassicSinglePortfolio from "@/components/portfolios/single-item/classic-single-portfolio";
 import LoadMoreBtn from "@/components/load-more-btn";
+import { gallerySlugData } from "@/utils/function";
 
 // data
 const categories = [
@@ -50,6 +51,30 @@ const PortfolioClassic = ({ tooltip_hover }) => {
   const handleLoadMore = () => {
     setNext((value) => value + 3);
   };
+
+  const [loading, setLoading] = useState(false);
+  const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    slugData();
+  },[])
+
+  // api data get
+  const slugData = async () => {
+    try {
+      setLoading(true);
+      const res = await gallerySlugData("/portfolio-gallery-style/");
+console.log('✌️resgalleryPAgr  --->', res);
+      setPost(res);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      console.log("error: ", error);
+    }
+  };
+
+  console.log("post: ", post);
+
   return (
     <>
       <section className="portfolio__area pt-110 pb-75 p-relative fix">
@@ -89,8 +114,8 @@ const PortfolioClassic = ({ tooltip_hover }) => {
                         {cate === "All"
                           ? portfolio_classic_data.length
                           : portfolio_classic_data.filter(
-                            (item) => item.category === cate
-                          ).length}
+                              (item) => item.category === cate
+                            ).length}
                       </span>
                     </button>
                   ))}
@@ -99,7 +124,10 @@ const PortfolioClassic = ({ tooltip_hover }) => {
             </div>
           </div>
 
-          <motion.div layout className="row tp-gx-4 grid tp-portfolio-load-more">
+          <motion.div
+            layout
+            className="row tp-gx-4 grid tp-portfolio-load-more"
+          >
             {portfolioItems.slice(0, next).map((item, i) => (
               <div key={i} className="col-xl-4 col-lg-4 col-md-6 tp-portfolio">
                 <LayoutGroup>
@@ -123,6 +151,18 @@ const PortfolioClassic = ({ tooltip_hover }) => {
           )}
         </div>
       </section>
+
+      {loading ? <p>loading</p>: <>
+      {
+        post.map((item, i) => {
+          return(
+            <>
+              <div dangerouslySetInnerHTML={{__html: item.content}}></div>
+            </>
+          )
+        })
+      }
+      </>}
     </>
   );
 };
